@@ -1,0 +1,839 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="LUXE - Premium lifestyle products crafted for the modern connoisseur. Discover our curated collection of luxury essentials.">
+    <title>LUXE | Premium Lifestyle Collection</title>
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect fill='%230a0a0f' width='100' height='100' rx='20'/><text x='50' y='65' font-size='50' text-anchor='middle' fill='%2300d4ff' font-family='Arial' font-weight='bold'>L</text></svg>">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Liquid Ether Background -->
+    <canvas id="liquid-ether"></canvas>
+
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">LUXE</a>
+            <ul class="nav-links">
+                <li><a href="#collections">Collections</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#bestsellers">Best Sellers</a></li>
+                <li><a href="#testimonials">Reviews</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button class="nav-icon" id="search-btn" aria-label="Search">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <path d="m21 21-4.35-4.35"></path>
+                    </svg>
+                </button>
+                <button class="nav-icon wishlist-btn" aria-label="Wishlist">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path
+                            d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
+                        </path>
+                    </svg>
+                    <span class="badge">2</span>
+                </button>
+                <button class="nav-icon cart-btn" id="cart-btn" aria-label="Cart">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <path d="M16 10a4 4 0 0 1-8 0"></path>
+                    </svg>
+                    <span class="badge">3</span>
+                </button>
+                <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobile-menu">
+        <ul class="mobile-nav-links">
+            <li><a href="#collections">Collections</a></li>
+            <li><a href="#products">Products</a></li>
+            <li><a href="#bestsellers">Best Sellers</a></li>
+            <li><a href="#testimonials">Reviews</a></li>
+        </ul>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-content">
+            <span class="hero-badge animate-on-scroll">✦ New Collection 2026</span>
+            <h1 class="hero-title">
+                <span class="title-line animate-on-scroll">Redefine Your</span>
+                <span class="title-line gradient-text animate-on-scroll">Lifestyle</span>
+            </h1>
+            <p class="hero-subtitle animate-on-scroll">Discover our curated collection of premium essentials crafted for
+                the modern connoisseur. Where luxury meets innovation.</p>
+            <div class="hero-cta animate-on-scroll">
+                <a href="#products" class="btn btn-primary magnetic">
+                    <span>Shop Collection</span>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M5 12h14M12 5l7 7-7 7"></path>
+                    </svg>
+                </a>
+                <a href="#collections" class="btn btn-secondary magnetic">Explore More</a>
+            </div>
+            <div class="hero-stats animate-on-scroll">
+                <div class="stat">
+                    <span class="stat-value">50K+</span>
+                    <span class="stat-label">Happy Customers</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-value">200+</span>
+                    <span class="stat-label">Premium Products</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-value">4.9</span>
+                    <span class="stat-label">Average Rating</span>
+                </div>
+            </div>
+        </div>
+        <div class="hero-visual animate-on-scroll">
+            <div class="hero-image-container">
+                <div class="hero-glow"></div>
+                <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=600&q=80" alt="Premium Watch"
+                    class="hero-product">
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <span>Scroll</span>
+            <div class="scroll-line"></div>
+        </div>
+    </section>
+
+    <!-- Featured Collections -->
+    <section class="collections" id="collections">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <span class="section-tag">Curated For You</span>
+                <h2 class="section-title">Featured Collections</h2>
+            </div>
+            <div class="collections-grid">
+                <article class="collection-card large animate-on-scroll" data-parallax>
+                    <div class="collection-image">
+                        <img src="https://images.unsplash.com/photo-1491637639811-60e2756cc1c7?w=800&q=80"
+                            alt="Accessories Collection" loading="lazy">
+                    </div>
+                    <div class="collection-content">
+                        <h3>Luxury Accessories</h3>
+                        <p>Elevate every moment</p>
+                        <a href="#" class="collection-link magnetic">Shop Now →</a>
+                    </div>
+                </article>
+                <article class="collection-card animate-on-scroll" data-parallax>
+                    <div class="collection-image">
+                        <img src="https://images.unsplash.com/photo-1560343090-f0409e92791a?w=600&q=80"
+                            alt="Tech Collection" loading="lazy">
+                    </div>
+                    <div class="collection-content">
+                        <h3>Premium Tech</h3>
+                        <p>Innovation refined</p>
+                        <a href="#" class="collection-link magnetic">Explore →</a>
+                    </div>
+                </article>
+                <article class="collection-card animate-on-scroll" data-parallax>
+                    <div class="collection-image">
+                        <img src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=600&q=80"
+                            alt="Leather Collection" loading="lazy">
+                    </div>
+                    <div class="collection-content">
+                        <h3>Leather Essentials</h3>
+                        <p>Timeless craftsmanship</p>
+                        <a href="#" class="collection-link magnetic">Discover →</a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Grid -->
+    <section class="products" id="products">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <span class="section-tag">Our Selection</span>
+                <h2 class="section-title">Premium Products</h2>
+                <p class="section-desc">Handpicked excellence for discerning taste</p>
+            </div>
+            <div class="product-filters animate-on-scroll">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="watches">Watches</button>
+                <button class="filter-btn" data-filter="tech">Tech</button>
+                <button class="filter-btn" data-filter="accessories">Accessories</button>
+                <button class="filter-btn" data-filter="leather">Leather</button>
+            </div>
+            <div class="products-grid">
+                <article class="product-card animate-on-scroll" data-category="watches">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=400&q=80"
+                            alt="Classic Chronograph" loading="lazy">
+                        <div class="product-actions">
+                            <button class="action-btn quick-view" aria-label="Quick View">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                                    <circle cx="12" cy="12" r="3"></circle>
+                                </svg>
+                            </button>
+                            <button class="action-btn wishlist" aria-label="Add to Wishlist">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path
+                                        d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
+                                    </path>
+                                </svg>
+                            </button>
+                        </div>
+                        <span class="product-badge">New</span>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Watches</span>
+                        <h3 class="product-name">Classic Chronograph</h3>
+                        <div class="product-rating">
+                            <span class="stars">★★★★★</span>
+                            <span class="count">(128)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="current">$459.00</span>
+                            <span class="original">$599.00</span>
+                        </div>
+                        <button class="btn btn-add-cart magnetic">Add to Cart</button>
+                    </div>
+                </article>
+
+                <article class="product-card animate-on-scroll" data-category="tech">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=400&q=80"
+                            alt="Wireless Pro Headphones" loading="lazy">
+                        <div class="product-actions">
+                            <button class="action-btn quick-view" aria-label="Quick View">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                                    <circle cx="12" cy="12" r="3"></circle>
+                                </svg>
+                            </button>
+                            <button class="action-btn wishlist" aria-label="Add to Wishlist">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path
+                                        d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
+                                    </path>
+                                </svg>
+                            </button>
+                        </div>
+                        <span class="product-badge hot">Hot</span>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Tech</span>
+                        <h3 class="product-name">Wireless Pro Headphones</h3>
+                        <div class="product-rating">
+                            <span class="stars">★★★★★</span>
+                            <span class="count">(256)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="current">$349.00</span>
+                        </div>
+                        <button class="btn btn-add-cart magnetic">Add to Cart</button>
+                    </div>
+                </article>
+
+                <article class="product-card animate-on-scroll" data-category="accessories">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1572635196237-14b3f281503f?w=400&q=80"
+                            alt="Aviator Sunglasses" loading="lazy">
+                        <div class="product-actions">
+                            <button class="action-btn quick-view" aria-label="Quick View">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                                    <circle cx="12" cy="12" r="3"></circle>
+                                </svg>
+                            </button>
+                            <button class="action-btn wishlist" aria-label="Add to Wishlist">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path
+                                        d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
+                                    </path>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Accessories</span>
+                        <h3 class="product-name">Aviator Sunglasses</h3>
+                        <div class="product-rating">
+                            <span class="stars">★★★★☆</span>
+                            <span class="count">(89)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="current">$189.00</span>
+                        </div>
+                        <button class="btn btn-add-cart magnetic">Add to Cart</button>
+                    </div>
+                </article>
+
+                <article class="product-card animate-on-scroll" data-category="leather">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1548036328-c9fa89d128fa?w=400&q=80"
+                            alt="Executive Leather Bag" loading="lazy">
+                        <div class="product-actions">
+                            <button class="action-btn quick-view" aria-label="Quick View">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                                    <circle cx="12" cy="12" r="3"></circle>
+                                </svg>
+                            </button>
+                            <button class="action-btn wishlist" aria-label="Add to Wishlist">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path
+                                        d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
+                                    </path>
+                                </svg>
+                            </button>
+                        </div>
+                        <span class="product-badge sale">-25%</span>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Leather</span>
+                        <h3 class="product-name">Executive Leather Bag</h3>
+                        <div class="product-rating">
+                            <span class="stars">★★★★★</span>
+                            <span class="count">(312)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="current">$299.00</span>
+                            <span class="original">$399.00</span>
+                        </div>
+                        <button class="btn btn-add-cart magnetic">Add to Cart</button>
+                    </div>
+                </article>
+
+                <article class="product-card animate-on-scroll" data-category="tech">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1546868871-7041f2a55e12?w=400&q=80"
+                            alt="Smart Watch Elite" loading="lazy">
+                        <div class="product-actions">
+                            <button class="action-btn quick-view" aria-label="Quick View">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                                    <circle cx="12" cy="12" r="3"></circle>
+                                </svg>
+                            </button>
+                            <button class="action-btn wishlist" aria-label="Add to Wishlist">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path
+                                        d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
+                                    </path>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Tech</span>
+                        <h3 class="product-name">Smart Watch Elite</h3>
+                        <div class="product-rating">
+                            <span class="stars">★★★★★</span>
+                            <span class="count">(445)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="current">$549.00</span>
+                        </div>
+                        <button class="btn btn-add-cart magnetic">Add to Cart</button>
+                    </div>
+                </article>
+
+                <article class="product-card animate-on-scroll" data-category="accessories">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1585386959984-a4155224a1ad?w=400&q=80"
+                            alt="Premium Cologne" loading="lazy">
+                        <div class="product-actions">
+                            <button class="action-btn quick-view" aria-label="Quick View">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                                    <circle cx="12" cy="12" r="3"></circle>
+                                </svg>
+                            </button>
+                            <button class="action-btn wishlist" aria-label="Add to Wishlist">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path
+                                        d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
+                                    </path>
+                                </svg>
+                            </button>
+                        </div>
+                        <span class="product-badge">Limited</span>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Accessories</span>
+                        <h3 class="product-name">Premium Cologne</h3>
+                        <div class="product-rating">
+                            <span class="stars">★★★★★</span>
+                            <span class="count">(178)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="current">$125.00</span>
+                        </div>
+                        <button class="btn btn-add-cart magnetic">Add to Cart</button>
+                    </div>
+                </article>
+
+                <article class="product-card animate-on-scroll" data-category="leather">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1627123424574-724758594e93?w=400&q=80"
+                            alt="Leather Wallet" loading="lazy">
+                        <div class="product-actions">
+                            <button class="action-btn quick-view" aria-label="Quick View">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                                    <circle cx="12" cy="12" r="3"></circle>
+                                </svg>
+                            </button>
+                            <button class="action-btn wishlist" aria-label="Add to Wishlist">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path
+                                        d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
+                                    </path>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Leather</span>
+                        <h3 class="product-name">Italian Leather Wallet</h3>
+                        <div class="product-rating">
+                            <span class="stars">★★★★★</span>
+                            <span class="count">(203)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="current">$89.00</span>
+                        </div>
+                        <button class="btn btn-add-cart magnetic">Add to Cart</button>
+                    </div>
+                </article>
+
+                <article class="product-card animate-on-scroll" data-category="watches">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1524592094714-0f0654e20314?w=400&q=80"
+                            alt="Minimalist Watch" loading="lazy">
+                        <div class="product-actions">
+                            <button class="action-btn quick-view" aria-label="Quick View">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                                    <circle cx="12" cy="12" r="3"></circle>
+                                </svg>
+                            </button>
+                            <button class="action-btn wishlist" aria-label="Add to Wishlist">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path
+                                        d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
+                                    </path>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Watches</span>
+                        <h3 class="product-name">Minimalist Rose Gold</h3>
+                        <div class="product-rating">
+                            <span class="stars">★★★★★</span>
+                            <span class="count">(156)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="current">$329.00</span>
+                        </div>
+                        <button class="btn btn-add-cart magnetic">Add to Cart</button>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Best Sellers -->
+    <section class="bestsellers" id="bestsellers">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <span class="section-tag">Customer Favorites</span>
+                <h2 class="section-title">Best Sellers</h2>
+            </div>
+            <div class="bestsellers-slider">
+                <div class="bestseller-card animate-on-scroll">
+                    <div class="bestseller-rank">#1</div>
+                    <div class="bestseller-image">
+                        <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=300&q=80"
+                            alt="Best Seller 1" loading="lazy">
+                    </div>
+                    <div class="bestseller-info">
+                        <h4>Classic Chronograph</h4>
+                        <p>$459.00</p>
+                        <span class="sold">2,340 sold</span>
+                    </div>
+                </div>
+                <div class="bestseller-card animate-on-scroll">
+                    <div class="bestseller-rank">#2</div>
+                    <div class="bestseller-image">
+                        <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=300&q=80"
+                            alt="Best Seller 2" loading="lazy">
+                    </div>
+                    <div class="bestseller-info">
+                        <h4>Wireless Pro</h4>
+                        <p>$349.00</p>
+                        <span class="sold">1,890 sold</span>
+                    </div>
+                </div>
+                <div class="bestseller-card animate-on-scroll">
+                    <div class="bestseller-rank">#3</div>
+                    <div class="bestseller-image">
+                        <img src="https://images.unsplash.com/photo-1548036328-c9fa89d128fa?w=300&q=80"
+                            alt="Best Seller 3" loading="lazy">
+                    </div>
+                    <div class="bestseller-info">
+                        <h4>Executive Bag</h4>
+                        <p>$299.00</p>
+                        <span class="sold">1,567 sold</span>
+                    </div>
+                </div>
+                <div class="bestseller-card animate-on-scroll">
+                    <div class="bestseller-rank">#4</div>
+                    <div class="bestseller-image">
+                        <img src="https://images.unsplash.com/photo-1546868871-7041f2a55e12?w=300&q=80"
+                            alt="Best Seller 4" loading="lazy">
+                    </div>
+                    <div class="bestseller-info">
+                        <h4>Smart Watch Elite</h4>
+                        <p>$549.00</p>
+                        <span class="sold">1,234 sold</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials" id="testimonials">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <span class="section-tag">What Customers Say</span>
+                <h2 class="section-title">Trusted Reviews</h2>
+            </div>
+            <div class="testimonials-grid">
+                <article class="testimonial-card animate-on-scroll">
+                    <div class="testimonial-content">
+                        <div class="quote-icon">❝</div>
+                        <p>"The quality exceeded my expectations. Every detail speaks luxury. This is now my go-to store
+                            for premium products."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&q=80"
+                            alt="James Wilson" loading="lazy">
+                        <div class="author-info">
+                            <h4>James Wilson</h4>
+                            <span>Verified Buyer</span>
+                            <div class="rating">★★★★★</div>
+                        </div>
+                    </div>
+                </article>
+                <article class="testimonial-card animate-on-scroll">
+                    <div class="testimonial-content">
+                        <div class="quote-icon">❝</div>
+                        <p>"Impeccable craftsmanship and fast delivery. The leather bag I purchased is absolutely
+                            stunning. Worth every penny."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&q=80"
+                            alt="Sarah Chen" loading="lazy">
+                        <div class="author-info">
+                            <h4>Sarah Chen</h4>
+                            <span>Verified Buyer</span>
+                            <div class="rating">★★★★★</div>
+                        </div>
+                    </div>
+                </article>
+                <article class="testimonial-card animate-on-scroll">
+                    <div class="testimonial-content">
+                        <div class="quote-icon">❝</div>
+                        <p>"Finally, a brand that understands premium. The attention to detail in packaging and product
+                            quality is unmatched."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&q=80"
+                            alt="Michael Ross" loading="lazy">
+                        <div class="author-info">
+                            <h4>Michael Ross</h4>
+                            <span>Verified Buyer</span>
+                            <div class="rating">★★★★★</div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="newsletter">
+        <div class="container">
+            <div class="newsletter-content animate-on-scroll">
+                <div class="newsletter-text">
+                    <span class="section-tag">Stay Updated</span>
+                    <h2>Join the LUXE Circle</h2>
+                    <p>Be the first to know about new arrivals, exclusive offers, and style tips.</p>
+                </div>
+                <form class="newsletter-form" id="newsletter-form">
+                    <div class="input-group">
+                        <input type="email" placeholder="Enter your email" required>
+                        <button type="submit" class="btn btn-primary magnetic">
+                            <span>Subscribe</span>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M5 12h14M12 5l7 7-7 7"></path>
+                            </svg>
+                        </button>
+                    </div>
+                    <p class="form-note">✦ Get 15% off your first order</p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#" class="logo">LUXE</a>
+                    <p>Premium lifestyle products crafted for the modern connoisseur.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Instagram" class="social-link magnetic">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                            </svg>
+                        </a>
+                        <a href="#" aria-label="Twitter" class="social-link magnetic">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path
+                                    d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z">
+                                </path>
+                            </svg>
+                        </a>
+                        <a href="#" aria-label="Facebook" class="social-link magnetic">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                            </svg>
+                        </a>
+                        <a href="#" aria-label="LinkedIn" class="social-link magnetic">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path
+                                    d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z">
+                                </path>
+                                <rect x="2" y="9" width="4" height="12"></rect>
+                                <circle cx="4" cy="4" r="2"></circle>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>Shop</h4>
+                    <ul>
+                        <li><a href="#">All Products</a></li>
+                        <li><a href="#">Watches</a></li>
+                        <li><a href="#">Tech</a></li>
+                        <li><a href="#">Accessories</a></li>
+                        <li><a href="#">Leather</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Press</a></li>
+                        <li><a href="#">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Shipping</a></li>
+                        <li><a href="#">Returns</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 LUXE. All rights reserved.</p>
+                <div class="footer-legal">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Cart Drawer -->
+    <div class="cart-overlay" id="cart-overlay"></div>
+    <aside class="cart-drawer" id="cart-drawer">
+        <div class="cart-header">
+            <h3>Your Cart <span class="cart-count">(3)</span></h3>
+            <button class="close-cart" id="close-cart" aria-label="Close Cart">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
+        </div>
+        <div class="cart-items">
+            <div class="cart-item">
+                <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=100&q=80"
+                    alt="Classic Chronograph">
+                <div class="cart-item-info">
+                    <h4>Classic Chronograph</h4>
+                    <span class="cart-item-price">$459.00</span>
+                    <div class="cart-item-qty">
+                        <button class="qty-btn">−</button>
+                        <span>1</span>
+                        <button class="qty-btn">+</button>
+                    </div>
+                </div>
+                <button class="remove-item" aria-label="Remove">×</button>
+            </div>
+            <div class="cart-item">
+                <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=100&q=80" alt="Wireless Pro">
+                <div class="cart-item-info">
+                    <h4>Wireless Pro Headphones</h4>
+                    <span class="cart-item-price">$349.00</span>
+                    <div class="cart-item-qty">
+                        <button class="qty-btn">−</button>
+                        <span>1</span>
+                        <button class="qty-btn">+</button>
+                    </div>
+                </div>
+                <button class="remove-item" aria-label="Remove">×</button>
+            </div>
+            <div class="cart-item">
+                <img src="https://images.unsplash.com/photo-1572635196237-14b3f281503f?w=100&q=80"
+                    alt="Aviator Sunglasses">
+                <div class="cart-item-info">
+                    <h4>Aviator Sunglasses</h4>
+                    <span class="cart-item-price">$189.00</span>
+                    <div class="cart-item-qty">
+                        <button class="qty-btn">−</button>
+                        <span>1</span>
+                        <button class="qty-btn">+</button>
+                    </div>
+                </div>
+                <button class="remove-item" aria-label="Remove">×</button>
+            </div>
+        </div>
+        <div class="cart-footer">
+            <div class="cart-subtotal">
+                <span>Subtotal</span>
+                <span class="subtotal-amount">$997.00</span>
+            </div>
+            <p class="cart-note">Shipping calculated at checkout</p>
+            <button class="btn btn-primary btn-checkout magnetic">Checkout</button>
+            <button class="btn btn-secondary btn-continue">Continue Shopping</button>
+        </div>
+    </aside>
+
+    <!-- Quick View Modal -->
+    <div class="modal-overlay" id="modal-overlay"></div>
+    <div class="quick-view-modal" id="quick-view-modal">
+        <button class="close-modal" id="close-modal" aria-label="Close">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="18" y1="6" x2="6" y2="18"></line>
+                <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+        </button>
+        <div class="modal-content">
+            <div class="modal-image">
+                <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=600&q=80" alt="Product"
+                    id="modal-product-image">
+            </div>
+            <div class="modal-info">
+                <span class="product-category" id="modal-category">Watches</span>
+                <h2 id="modal-title">Classic Chronograph</h2>
+                <div class="product-rating">
+                    <span class="stars">★★★★★</span>
+                    <span class="count">(128 reviews)</span>
+                </div>
+                <p class="modal-description">Experience timeless elegance with our Classic Chronograph. Crafted with
+                    precision Swiss movement and premium materials, this timepiece is a testament to luxury and
+                    sophistication.</p>
+                <div class="modal-price">
+                    <span class="current" id="modal-price">$459.00</span>
+                    <span class="original">$599.00</span>
+                </div>
+                <div class="modal-options">
+                    <div class="option-group">
+                        <label>Color</label>
+                        <div class="color-options">
+                            <button class="color-option active" style="background: #c4a77d"></button>
+                            <button class="color-option" style="background: #1a1a1a"></button>
+                            <button class="color-option" style="background: #c0c0c0"></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-actions">
+                    <button class="btn btn-primary btn-add-cart magnetic">Add to Cart</button>
+                    <button class="btn btn-wishlist magnetic">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path
+                                d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
+                            </path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div class="toast" id="toast">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+            <polyline points="22 4 12 14.01 9 11.01"></polyline>
+        </svg>
+        <span id="toast-message">Added to cart!</span>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
