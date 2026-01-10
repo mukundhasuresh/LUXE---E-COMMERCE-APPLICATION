@@ -23,7 +23,7 @@ A luxury, high-performance e-commerce website with dark theme, liquid ether anim
 
 ```bash
 # Clone the repository
-git clone 
+git clone https://github.com/mukundhasuresh/LUXE---E-COMMERCE-APPLICATION.git
 
 # Navigate to project
 cd e-commerce-website
