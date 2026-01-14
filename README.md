@@ -7,7 +7,7 @@ A luxury, high-performance e-commerce website with dark theme, liquid ether anim
 ![CSS3](https://img.shields.io/badge/CSS3-1572B6?logo=css3&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=black)
 
-## ✨ Features
+## Features
 
 - **Liquid Ether Background** - Flowing, mouse-reactive animated particles
 - **Premium Dark Theme** - Deep charcoal with electric blue, emerald & gold accents
@@ -19,7 +19,7 @@ A luxury, high-performance e-commerce website with dark theme, liquid ether anim
 - **Wishlist** - Save favorite products
 - **Responsive Design** - Works on all devices
 
-## 🚀 Quick Start
+## Quick Start
 
 ```bash
 # Clone the repository
@@ -37,7 +37,7 @@ npx serve .
 
 Open http://localhost:5500 in your browser.
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 ├── index.html      # Main HTML structure
@@ -46,7 +46,7 @@ Open http://localhost:5500 in your browser.
 └── README.md       # Documentation
 ```
 
-## 🎨 Design System
+## Design System
 
 ### Colors
 | Color | Hex | Usage |
@@ -61,7 +61,7 @@ Open http://localhost:5500 in your browser.
 - **Headings**: Outfit (Google Fonts)
 - **Body**: Inter (Google Fonts)
 
-## 🛠️ Technologies
+## Technologies
 
 - HTML5
 - CSS3 (Custom Properties, Flexbox, Grid)
@@ -69,13 +69,13 @@ Open http://localhost:5500 in your browser.
 - Canvas API (Liquid Ether effect)
 - Intersection Observer (Scroll animations)
 
-## 📱 Responsive Breakpoints
+## Responsive Breakpoints
 
 - Desktop: 1024px+
 - Tablet: 768px - 1023px
 - Mobile: < 768px
 
-## 📄 License
+## License
 
 MIT License - feel free to use for personal or commercial projects.
 
